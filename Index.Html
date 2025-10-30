@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Cadastro de Candidato - SENAI</title>
+<style>
+  body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+  form {
+    background-color: #ffffff;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    margin: 50px auto;
+  }
+  h2 {
+    text-align: center;
+    color: #007bff;
+  }
+  label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<form onsubmit="enviarFormulario(event)">
+  <h2>Inscrição SENAI</h2>
+
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" name="nome" required>
+
+  <label for="email">E-mail:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="telefone">Telefone:</label>
+  <input type="tel" id="telefone" name="telefone" required>
+
+  <label for="curso">Curso desejado:</label>
+  <select id="curso" name="curso" required>
+    <option value="">Selecione...</option>
+    <option>Desenvolvimento de Sistemas</option>
+    <option>Técnico em Informática</option>
+    <option>Técnico em Mecânica</option>
+    <option>Técnico em Eletrônica</option>
+  </select>
+
+  <label for="obs">Observações:</label>
+  <textarea id="obs" name="obs" rows="4"></textarea>
+
+  <button type="submit">Enviar</button>
+</form>
+
+<script>
+  function enviarFormulario(event) {
+    event.preventDefault();
+    alert("Cadastro enviado com sucesso!");
+  }
+</script>
+
+</body>
+</html>
